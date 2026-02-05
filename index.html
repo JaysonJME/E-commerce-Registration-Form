@@ -4,32 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Commerce Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            width: 350px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #444;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #4facfe;
+            outline: none;
+            box-shadow: 0 0 5px #4facfe;
+        }
+
+        .terms {
+            margin-bottom: 20px;
+        }
+
+        .btn-container {
+            text-align: center;
+        }
+
+        button {
+            background: linear-gradient(135deg, #43e97b, #38f9d7);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+    </style>
 </head>
 <body>
-    <h2>E-Commerce Registration Form</h2>
 
-    <form action="#" method="POST">
-        <label for="name">Full Name:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
+    <div class="form-container">
 
-        <label for="email">Email Address:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+        <h2>Business Registration</h2>
 
-        <label for="phone">Phone Number:</label><br>
-        <input type="tel" id="phone" name="phone" required><br><br>
+        <form action="thankyou.html" method="GET">
 
-        <label for="business">Business Name:</label><br>
-        <input type="text" id="business" name="business" required><br><br>
+            <label>Full Name:</label>
+            <input type="text" name="name" required>
 
-        <label for="country">Country of Origin:</label><br>
-        <input type="text" id="country" name="country" placeholder="Enter your Country" required><br><br>
-      
-        <label>
-            <input type="checkbox" id="terms" name="terms" required>
-             I agree to the Terms and Conditions
-        </label><br><br>
+            <label>Email Address:</label>
+            <input type="email" name="email" required>
 
-        <button type="submit">Register</button>
-    </form>
+            <label>Phone Number:</label>
+            <input type="tel" name="phone" required>
+
+            <label>Business Name:</label>
+            <input type="text" name="business" required>
+
+            <label>Country of Origin:</label>
+            <input type="text" name="country" placeholder="Enter your country" required>
+
+            <div class="terms">
+                <input type="checkbox" required> I agree to the terms and conditions
+            </div>
+
+            <div class="btn-container">
+                <button type="submit">Register</button>
+            </div>
+
+        </form>
+
+    </div>
+
 </body>
 </html>
